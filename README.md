@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Job Finder App - README 🚀  
 
 The **Job Finder App** is a 🌟 small but powerful web application designed to help people find job opportunities with ease. Built with simplicity and accessibility in mind, this app showcases how modern web technologies can be combined to create a meaningful impact. 💼✨  
@@ -52,3 +53,7 @@ If you're looking to learn or improve this project, follow these steps:
    ```bash  
    git push origin main
    ```  
+=======
+# new-app
+create
+>>>>>>> b3fbecb193bf8675b80a723437ff7b5cec5eb367
