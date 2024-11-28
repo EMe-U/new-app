@@ -3,7 +3,6 @@ body {
     margin: 20px;
     padding: 0;
     background-color: #f4f4f9;
-<<<<<<< HEAD
 }
 
 h1 {
@@ -17,7 +16,6 @@ h1 {
 }
 
 input[type="text"] {
-=======
   }
   
   h1 {
@@ -36,43 +34,25 @@ input[type="text"] {
     width: 60%;
     margin-right: 10px;
     font-size: 16px;
-<<<<<<< HEAD
 }
 
 button {
-=======
-  }
-  
-  button {
->>>>>>> b3fbecb193bf8675b80a723437ff7b5cec5eb367
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     background-color: #007BFF;
     color: white;
     border: none;
-<<<<<<< HEAD
 }
 
 .job-list {
-=======
-  }
-  
-  .job-list {
->>>>>>> b3fbecb193bf8675b80a723437ff7b5cec5eb367
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-<<<<<<< HEAD
 }
 
 .job {
-=======
-  }
-  
-  .job {
->>>>>>> b3fbecb193bf8675b80a723437ff7b5cec5eb367
     background-color: white;
     padding: 15px;
     border-radius: 8px;
@@ -80,7 +60,6 @@ button {
     margin: 10px;
     width: 80%;
     text-align: center;
-<<<<<<< HEAD
 }
 
 .job a {
@@ -93,16 +72,3 @@ button {
     text-decoration: underline;
 }
   
-=======
-  }
-  
-  .job a {
-    text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
-  }
-  
-  .job a:hover {
-    text-decoration: underline;
-  }  
->>>>>>> b3fbecb193bf8675b80a723437ff7b5cec5eb367
