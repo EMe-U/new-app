@@ -1,6 +1,6 @@
 async function findJobs() {
     const query = document.getElementById('search').value;
-    const apiUrl = `http://localhost:5000/jobs?search=${query}`;
+    const apiUrl = `https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id={7a00d62a}&app_key={00df6f70970657c5c2df338b356ab296}`;
   
     try {
       const response = await fetch(apiUrl);
