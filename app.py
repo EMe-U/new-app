@@ -1,19 +1,21 @@
-from Flask import Flask, jsonify, request # type: ignore
+from flask import Flask, request, jsonify # type: ignore
 import requests # type: ignore
 import os
 from dotenv import load_dotenv # type: ignore
+from flask_cors import CORS # type: ignore
 
 # Load environment variables (API credentials)
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)
 
 # Adzuna API URL (correct endpoint format)
-API_URL = "https://api.adzuna.com/v1/api/jobs/gb/search/1" 
+API_URL = "https://api.adzuna.com/v1/api/jobs/gb/search/1"
 
 # Load App ID and App Key from .env file
-APP_ID = os.getenv('ADZUNA_APP_ID')  # Replace with actual environment variable names
-APP_KEY = os.getenv('ADZUNA_APP_KEY')  # Replace with actual environment variable names
+APP_ID = os.getenv('APP_ID')
+APP_KEY = os.getenv('APP_KEY')
 
 @app.route('/jobs', methods=['GET'])
 def get_jobs():
@@ -40,19 +42,16 @@ def get_jobs():
     if not job_data:
         return jsonify({"message": "No jobs found"}), 404
 
-    # Process job data to display useful information
-    jobs = [
-        {
-            "title": job.get('title'),
-            "company": job.get('company', {}).get('display_name', 'N/A'),
-            "location": job.get('location', {}).get('display_name', 'N/A'),
-            "url": job.get('redirect_url', '#')
-        }
-        for job in job_data
-    ]
+    formatted_jobs = []
+    for job in job_data:
+        formatted_jobs.append({
+            'title': job.get('title'),
+            'company': job.get('company', {}).get('display_name'),
+            'location': job.get('location', {}).get('display_name'),
+            'url': job.get('redirect_url')
+        })
 
-    # Return the job results as JSON
-    return jsonify({"jobs": jobs})
+    return jsonify(formatted_jobs), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
